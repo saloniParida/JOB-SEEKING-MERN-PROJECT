@@ -23,10 +23,10 @@ app.use(
 );
 const __dirname = path.resolve();
 
-app.use(express.static(path.join(__dirname,'/client/dist')))
+app.use(express.static(path.join(__dirname,'/FRONTEND/dist')))
 
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,"/client","dist","index.html"))
+  res.sendFile(path.join(__dirname,"/FRONTEND","dist","index.html"))
 })
 app.use(cookieParser());
 app.use(express.json());
